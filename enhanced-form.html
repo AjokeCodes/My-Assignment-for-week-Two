@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veekee Stylez Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        header, main, footer {
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Veekee Stylez</h1>
+    <p>We Slay Hair for a Living</p>
+</header>
+
+<main>
+
+    <!-- Lists Section -->
+    <section>
+        <h2>Our Services</h2>
+        <ul>
+            <li>Hair Styling</li>
+            <li>Manicure & Pedicure</li>
+            <li>Hair Treatments</li>
+            <li>Makeup</li>
+        </ul>
+        <ol>
+            <li>Choose your desired service</li>
+            <li>Check available packages</li>
+            <li>Book your appointment using the form below</li>
+        </ol>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+        <h2>Service Pricing</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Basic Package</th>
+                    <th>Premium Package</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hair Styling</td>
+                    <td>₦3,000</td>
+                    <td>₦8,000</td>
+                </tr>
+                <tr>
+                    <td>Manicure & Pedicure</td>
+                    <td>₦2,000</td>
+                    <td>₦5,000</td>
+                </tr>
+                <tr>
+                    <td>Hair Treatments</td>
+                    <td>₦4,000</td>
+                    <td>₦10,000</td>
+                </tr>
+                <tr>
+                    <td>Makeup</td>
+                    <td>₦5,000</td>
+                    <td>₦12,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+        <h2>Gallery</h2>
+        <img src="https://via.placeholder.com/600x300" alt="Stylish hair makeover">
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- HTML5 Form Section -->
+    <section>
+        <h2>Book Your Appointment</h2>
+        <form action="#" method="post" autocomplete="on">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+2341234567890" pattern="\+234\d{10}" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Service Selection</legend>
+
+                <label for="service">Choose a Service</label>
+                <select id="service" name="service" required>
+                    <option value="">--Select a service--</option>
+                    <option value="hairstyle">Hair Styling</option>
+                    <option value="manicure">Manicure & Pedicure</option>
+                    <option value="treatment">Hair Treatment</option>
+                    <option value="makeup">Makeup</option>
+                </select>
+
+                <label for="package">Choose a Package</label>
+                <input type="radio" id="basic" name="package" value="basic" required>
+                <label for="basic">Basic</label>
+                <input type="radio" id="premium" name="package" value="premium" required>
+                <label for="premium">Premium</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Appointment Details</legend>
+
+                <label for="appointmentdate">Preferred Date</label>
+                <input type="date" id="appointmentdate" name="appointmentdate" required>
+
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Any preferences or requests" maxlength="500"></textarea>
+
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                    Subscribe to updates and promotions
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Confirmation</legend>
+                <label for="refcode">Reference Code</label>
+                <input type="text" id="refcode" name="refcode" value="VEK2025" readonly>
+            </fieldset>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Veekee Stylez. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
